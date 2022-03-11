@@ -48,10 +48,10 @@
 
             if (navigator.geolocation) {
                 
-                navigator.geolocation.getCurrentPosition( position=>{
+                navigator.geolocation.getCurrentPosition( position => {
                     let posicion = {
-                        lat: position.coors.latitude,
-                        lng: position.coors.longitude
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
                     }
 
                     let propiedadesMarcador = {
@@ -69,7 +69,7 @@
                     });
 
                     marcador.addListener("click", ()=>{
-                        infoWindow.open(map,marcador)
+                        infoWindow.open(map,marcador);
                     });
 
                 });
