@@ -38,3 +38,8 @@
 .icon-git:hover {
     color: rgb(86, 79, 92);
 } 
+
+#map {
+    width: 100%;
+    height: 500px;
+}
