@@ -40,7 +40,7 @@ function iniciaMapa() {
   for (marcador of marcadores) {
     let marker = new google.maps.Marker({
       map: map,
-      position: new google.LatLng(marcador.latitude, marcador.longitude),
+      position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
       title: marcador.name,
     });
   }
