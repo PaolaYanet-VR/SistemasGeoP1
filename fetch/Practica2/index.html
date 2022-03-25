@@ -17,40 +17,7 @@
     <div id="paises" class="container">
     </div> 
 
-    <script>
-
-        var paises = document.getElementById("paises");
-
-        fetch("../json/paises.json")
-        .then( response => {
-
-            console.log(response);
-            response.json().then( datos => {
-
-                let contador = 1;
-
-                datos.forEach( registro => {
-                    
-                    let renglon = document.createElement("div");
-                    renglon.className = "row border by-light m-2";
-                    paises.appendChild(renglon);
-
-                    let columna = document.createElement("div");
-                    columna.className = "col-12";
-                    renglon.appendChild(columna);
-
-                    let nombre = document.createElement("p");
-                    nombre.textContent = contador + ") " + registro.CountryName;
-                    columna.appendChild(nombre);
-
-                    contador++;
-
-                });
-
-            })
-        })
-
-    </script>
+    <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
