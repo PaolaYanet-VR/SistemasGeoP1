@@ -1,45 +1,70 @@
-
 .dark-background {
-    background-color: #1a1819;
+  background-color: #1a1819;
 }
 
 .text-whity {
-    color: #FFF1F4;
+  color: #fff1f4;
 }
 
 .text-hover {
-    color: #a74848;
+  color: #a74848;
 }
 
 .text-hover:hover {
-    color: #CB2745;
+  color: #cb2745;
 }
 
 .text-red {
-    color: #CB2745;
+  color: #cb2745;
 }
 
 .t:hover {
-    color: #CB2745;
+  color: #cb2745;
 }
 
 .icon-insta:hover {
-    color: rgb(253, 142, 169);
-} 
+  color: rgb(253, 142, 169);
+}
 
 .icon-twitter:hover {
-    color: rgb(132, 174, 230);
-} 
+  color: rgb(132, 174, 230);
+}
 
 .icon-twitch:hover {
-    color: rgb(184, 118, 228);
-} 
+  color: rgb(184, 118, 228);
+}
 
 .icon-git:hover {
-    color: rgb(86, 79, 92);
-} 
+  color: rgb(86, 79, 92);
+}
 
 #map {
+  width: 100%;
+  height: 500px;
+}
+
+h5 {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.wrapper {
     width: 100%;
-    height: 500px;
+    height: 100%;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
 }
