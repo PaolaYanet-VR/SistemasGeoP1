@@ -1,5 +1,3 @@
-imp
-
 var coordenadas = {
     lat: 0,
     lng: 0
