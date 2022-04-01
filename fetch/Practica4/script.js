@@ -21,7 +21,7 @@ function iniciaMapa() {
                 });
                 let marker = new google.maps.Marker({
                     map: map,
-                    position: new google.mapsLatLng(marcador.CapitalLatitude, marcador.CapitalLongitude),
+                    position: new google.maps.LatLng(marcador.CapitalLatitude, marcador.CapitalLongitude),
                     title: marcador.CountryName
                 });
                 marker.addListener('click', function() {
