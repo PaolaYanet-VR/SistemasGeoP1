@@ -1,3 +1,25 @@
+.float-button {
+  position: absolute;
+  z-index: 10;
+  width: 130px !important;
+}
+
+.map-button1 {
+  top: 10px;
+}
+
+.map-button2 {
+  top: 60px;
+}
+
+.map-button3 {
+  top: 110px;
+}
+
+.map-button4 {
+  top: 160px;
+}
+
 .dark-background {
   background-color: #1a1819;
 }
@@ -38,9 +60,22 @@
   color: rgb(86, 79, 92);
 }
 
+.hide {
+  display: none;
+}
+    
+.button-show:hover + .hide {
+  display: block;
+}
+
 #map {
   width: 100%;
   height: 500px;
+}
+
+#mapa {
+  width: 100%;
+  height: 100%;
 }
 
 h5 {
@@ -58,8 +93,8 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
-    background-size: 600% 100%;
+    background: linear-gradient(90deg,#DC3544, #be404a, #ab4b53 , #DC3544,#be404a, #ab4b53);
+    background-size: 300% 100%;
     animation: gradient 16s linear infinite;
     animation-direction: alternate;
 }
@@ -67,4 +102,29 @@ h5 {
 @keyframes gradient {
     0% {background-position: 0%}
     100% {background-position: 100%}
+}
+
+.scroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: rgb(17,22,22);
+	border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: rgb(17,22,22);
+}
+
+.scroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: rgb(17,22,22);
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#ca2641),
+									   to(#DC3544),
+									   color-stop(.6,#ca2641))
 }

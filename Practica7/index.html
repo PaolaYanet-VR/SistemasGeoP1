@@ -6,53 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica 7</title>
 
+    <link href="..//Style.css" rel="stylesheet"/>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
-    <style>
-
-        html, body {
-            margin: 0px;
-            padding: 0px;
-        }
-    
-        #mapa {
-            width: 100%;
-            height: 640px;
-        } 
-    </style>
+    <script src="https://kit.fontawesome.com/5bd85f4020.js" crossorigin="anonymous"></script>
     
   </head>
-  <body>
-      
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Google Maps Clustering</h1>
-                    <div id="mapa"></div>
-                </div>
-            </div>
-            <div class="row p-2">
-                <div class="col-3 text-center">
-                    <button class="btn btn-primary" id="btnroadmap">Roadmap</button>
-                </div>
-                <div class="col-3 text-center">
-                    <button class="btn btn-warning" id="btnsatellite">Satellite</button>
-                </div>
-                <div class="col-3 text-center">
-                    <button class="btn btn-danger" id="btnhybrid">Hybrid</button>
-                </div>
-                <div class="col-3 text-center">
-                    <button class="btn btn-success" id="btnterrain">Terrain</button>
-                </div>
-            </div>
-        </div>
-    </div>
+  <body style="padding: 0%; margin: 0" class="scroll dark-background">
+
+    
+    <button class="btn btn-primary float-button map-button1" id="btnroadmap">
+      <i class="pe-3 fa-solid fa-road fa-1x"></i>Roadmap
+    </button>
+    <button class="btn btn-warning float-button map-button2" id="btnsatellite">
+      <i class="pe-3 fa-solid fa-satellite fa-1x"></i>Satellite
+    </button>
+    <button class="btn btn-danger float-button map-button3" id="btnhybrid">
+      <i class="pe-3 fa-solid fa-map fa-1x"></i>Hybrid
+    </button>
+    <button class="btn btn-success float-button map-button4" id="btnterrain">
+      <i class="pe-3 fa-solid fa-earth-americas fa-1x"></i>Terrain
+    </button>
+
+    <div id="mapa"></div>
 
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
