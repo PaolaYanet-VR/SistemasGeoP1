@@ -15,7 +15,7 @@ function iniciaMapa() {
             const map = new google.maps.Map(document.getElementById('map'), proopiedades);
             datos.forEach(marcador => {
                 console.log(marcador);
-                var informacion = '<strong class="dark-background text-whity">País: </strong>'+marcador.CountryName;
+                var informacion = '<div class="dark-background text-whity">País: </div>'+marcador.CountryName;
                 var infowindow = new google.maps.InfoWindow({
                     content: informacion
                 });
