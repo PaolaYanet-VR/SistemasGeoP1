@@ -12,7 +12,7 @@ function iniciaMapa() {
   var propiedades2 = {
     center: coordenadas,
     zoom: 12,
-    disableDefailtUI: true
+    disableDefaultUI: true
   }
   
   var mapa2 = new google.maps.Map(document.getElementById('mapa2'), propiedades2)
