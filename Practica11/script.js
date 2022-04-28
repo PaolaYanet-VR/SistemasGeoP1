@@ -38,4 +38,52 @@ function iniciaMapa() {
   
   var mapa4 = new google.maps.Map(document.getElementById('mapa4'), propiedades4)
 
+  var propiedades5 = {
+    center: coordenadas,
+    zoom: 12,
+    mapTypeControl: true,
+    mapTypeControlOptions : {
+      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+      position: google.maps.ControlPosition.TOP_CENTER
+    },
+    zoomControl: true,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_CENTER
+    },
+    scaleControl: true,
+    streetViewControl: true,
+    streetViewControlOptions : {
+      position : google.maps.ControlPosition.LEFT_TOP
+    },
+    fullscreenControl : true
+  }
+  
+  var mapa5 = new google.maps.Map(document.getElementById('mapa5'), propiedades5)
+
+  var limites = {
+    north: 21.390039,
+    south: 20.85414,
+    west: -102.149631,
+    east: -101.092990
+  }
+
+  var propiedades6 = {
+    center: coordenadas,
+    zoom: 12,
+    restriction: {
+      latLngBounds : limites,
+      strictBounds : false
+    }
+  }
+  
+  var mapa6 = new google.maps.Map(document.getElementById('mapa6'), propiedades6)
+  
+  var propiedades7 = {
+    center: coordenadas,
+    zoom: 19,
+    mapTypeId: "satellite"
+  }
+  
+  var mapa7 = new google.maps.Map(document.getElementById('mapa7'), propiedades7)
+  mapa7.setTilt(45);
 }
