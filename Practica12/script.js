@@ -99,7 +99,7 @@ function iniciaMapa() {
     
     // MAPA 6
 
-    var mapa6 = new google.maps.Map(document.getElementById('mapa6'), propiedades6)
+    var mapa6 = new google.maps.Map(document.getElementById('mapa6'), propiedades)
     
     google.maps.event.addDomListener(mapa6, 'click', function() {
         window.alert(' Se hizo click en el mapa');
