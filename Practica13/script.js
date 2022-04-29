@@ -3,6 +3,7 @@ var map;
 var markers = [];
 
 function iniciaMapa() {
+
     var coordenadas = { lat: 21.152639, lng: -101.711598 };
 
     var propiedades = {
@@ -14,6 +15,15 @@ function iniciaMapa() {
 
     muestraLugares();
 }
+
+var tipo = document.getElementById('tipo');
+var valor;
+
+tipo.addEventListener('change', function() {
+
+    valor = this.options[tipo.selectedIndex].value;
+    muestraLugares();
+});
 
 function muestraLugares() {
 
