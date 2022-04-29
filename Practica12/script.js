@@ -4,12 +4,12 @@ function iniciaMapa() {
   
     // MAPA 1
 
-    var propiedades1 = {
+    var propiedades = {
       center: coordenadas,
       zoom: 12
     }
   
-    var mapa1 = new google.maps.Map(document.getElementById('mapa1'), propiedades1)
+    var mapa1 = new google.maps.Map(document.getElementById('mapa1'), propiedades)
   
     var marker = new google.maps.Marker({
         position: coordenadas,
@@ -23,16 +23,16 @@ function iniciaMapa() {
 
     // MAPA 2
 
-    var mapa2 = new google.maps.Map(document.getElementById('mapa2'), propiedades2)
+    var mapa2 = new google.maps.Map(document.getElementById('mapa2'), propiedades)
   
     var marker2 = new google.maps.Marker({
         position: coordenadas,
         map: mapa2
     });
 
-    mapa2.addListener('center_changed', function(){
+    mapa2.addListener('center_changed', function() {
 
-        window.setTimeout( function(){
+        window.setTimeout( function() {
             mapa2.panTo(marker2.getPosition());
         }, 3000);
 
@@ -40,9 +40,9 @@ function iniciaMapa() {
     
     // MAPA 3
     
-    var mapa3 = new google.maps.Map(document.getElementById('mapa3'), propiedades3)
+    var mapa3 = new google.maps.Map(document.getElementById('mapa3'), propiedades)
     
-    mapa3.addListener('zoom_changed', function(){
+    mapa3.addListener('zoom_changed', function() {
 
         var infowindow = new google.maps.InfoWindow({
             content : 'Cambia el zoom',
@@ -58,15 +58,15 @@ function iniciaMapa() {
     
     // MAPA 4
 
-    var mapa4 = new google.maps.Map(document.getElementById('mapa4'), propiedades4)
+    var mapa4 = new google.maps.Map(document.getElementById('mapa4'), propiedades)
   
-    mapa4.addListener('click', function(e){
+    mapa4.addListener('click', function(e) {
         console.log(e.latLng);
 
         estableceMarcador(e.latLng);
     });
 
-    function estableceMarcador(latLng){
+    function estableceMarcador(latLng) {
 
         var marker = new google.maps.Marker({
             position: latLng,
@@ -79,7 +79,7 @@ function iniciaMapa() {
     
     // MAPA 5
 
-    var mapa5 = new google.maps.Map(document.getElementById('mapa5'), propiedades5)
+    var mapa5 = new google.maps.Map(document.getElementById('mapa5'), propiedades)
   
     var infowindow = new google.maps.InfoWindow({
         content : 'Haz click para obtener las coordenadas',
@@ -88,7 +88,7 @@ function iniciaMapa() {
 
     infowindow.open(mapa5);
 
-    mapa5.addListener('click', function(evento){
+    mapa5.addListener('click', function(evento) {
         infowindow.close();
 
         infowindow = new google.maps.InfoWindow({ position: evento.latLng });
@@ -101,13 +101,13 @@ function iniciaMapa() {
 
     var mapa6 = new google.maps.Map(document.getElementById('mapa6'), propiedades6)
     
-    google.maps.event.addDomListener(mapa6, 'click', function(){
+    google.maps.event.addDomListener(mapa6, 'click', function() {
         window.alert(' Se hizo click en el mapa');
     });
 
     var boton = document.getElementById('btnCentrar');
-    google.maps.event.addDomListener(boton, 'click', function(){
+    google.maps.event.addDomListener(boton, 'click', function() {
          mapa6.panTo(coordenadas);
     });
-    
+
   }
